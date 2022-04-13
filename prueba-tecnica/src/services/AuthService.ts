@@ -15,8 +15,8 @@ private baseURL:string;
         "ServiceName": "AdminService",
         "WSToken": "$#HHJGUYUHSDFGS546546DFH654SGHUJJFF==",
         "MethodHash": "com.advantage.bean.account.WorkSession_loguinUsuarioWS_String_String",
-         "ArgumentList": JSON.stringify([username, password],),
-         "content-type":"gzip;charset=UTF-8"
+         "ArgumentList": JSON.stringify([username, password]),
+         "content-type":"application/x-www-form-unreloaded"
       },
       
     }
@@ -27,6 +27,7 @@ async getAuth():Promise<AxiosResponse>{
    
    return axios.get(this.baseURL,this.axiosRequestConfiguration.headers).then((response)=>{
        console.log(response.statusText);
+       console.log("header",response.headers['content-type']);
 
     return response      
    })
