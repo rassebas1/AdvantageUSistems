@@ -1,0 +1,68 @@
+.login-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  background: rgb(6, 0, 94);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 0, 94, 1) 0%,
+    rgba(254, 254, 254, 1) 30%,
+    rgba(254, 254, 254, 1) 60%,
+    rgba(6, 0, 94, 1) 100%
+  );
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.home-container h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  margin-bottom: 0px;
+}
+
+.form-container {
+  display: flex;
+
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-container label {
+  color: rgba(6, 0, 94, 1);
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin: 8px;
+}
+.form-container input {
+  border-radius: 8px;
+  color: rgba(88, 88, 88, 0.85);
+  border: none;
+  box-shadow: 0px 2px rgba(6, 0, 94, 1);
+  margin: 4px;
+}
+.form-container button {
+  align-self: center;
+  font-weight: 600;
+  border-radius: 8px;
+  color: rgba(255, 248, 248, 0.85);
+  background-color: darkgray;
+  border: none;
+  box-shadow: 0px 2px rgba(6, 0, 94, 1);
+  margin: 4px;
+  width: 125px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.form-container button:hover {
+  background-color: rgba(6, 0, 94, 1);
+}

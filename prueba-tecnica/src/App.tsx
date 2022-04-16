@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 //import AuthService from "./services/AuthService";
 import UserService from "./services/UserService";
 import ListUser from "./views/ListUser/ListUser";
 import Login from "./views/Login/Login";
 import NotFoundPage from "./views/NotFound/NotFound";
+
 type DataToUpdate = {
   DataBeanProperties: {
     Nombre: string;
@@ -19,14 +20,16 @@ type DataToUpdate = {
   DataBeanName: "com.admin.bean.Propiedades";
 };
 function App() {
+  const [userName, setuserName] = React.useState("");
   const fetchUser = async () => {
     const userService = new UserService();
     try {
       userService.fetchUsers().then((response) => {
-        console.log("Response ReadUsers", response);
+     
         return response;
       });
     } catch (error) {
+
       return error;
     }
   };
@@ -34,7 +37,7 @@ function App() {
     const userService = new UserService();
     try {
       userService.readpropertyId(10).then((response) => {
-        console.log("ResponseReadProperty", response);
+        
         return response;
       });
     } catch (error) {
@@ -46,7 +49,7 @@ function App() {
     const userService = new UserService();
     try {
       userService.updatePropertyId(data).then((response) => {
-        console.log("Response UpdateProperty", response);
+        
         return response;
       });
     } catch (error) {
@@ -57,29 +60,14 @@ function App() {
     const userService = new UserService();
     try {
       userService.deletePropertyId(10).then((response) => {
-        console.log("Response Delete", response);
+        
         return response;
       });
     } catch (error) {
       return error;
     }
   };
-  // const verifyUser = async () => {
-  //   const authService = new AuthService(username, password);
-
-  //   try {
-  //     await authService.getAuth().then((response) => {
-  //       console.log(response);
-
-  //       return response;
-  //     });
-  //   } catch (error) {
-  //     if (error) {
-  //       setErrorText(error as string);
-  //     }
-  //   }
-  // };
-
+  
   React.useEffect(() => {
     fetchUser();
     fetchPropertyId();
@@ -90,7 +78,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login></Login>}></Route>
-        <Route path="/user" element={<ListUser></ListUser>}></Route>
+        <Route path="/users" element={<ListUser></ListUser>}></Route>
         <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
     </Router>
