@@ -1,0 +1,48 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+
+  color: rgba(88, 88, 88, 0.85);
+}
+.list-container button {
+  align-self: center;
+  font-weight: 600;
+  border-radius: 8px;
+  color: rgba(255, 248, 248, 0.85);
+  background-color: darkgray;
+  border: none;
+  box-shadow: 0px 2px rgba(6, 0, 94, 1);
+  margin: 4px;
+  width: 125px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.list-container button:hover {
+  background-color: rgba(6, 0, 94, 1);
+}
+.user-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 6px;
+  box-shadow: 2px 2px rgba(128, 128, 128, 0.659);
+  background: rgb(6, 0, 94);
+  background: linear-gradient(
+    90deg,
+    rgba(6, 0, 94, 1) 0%,
+    rgba(254, 254, 254, 1) 30%,
+    rgba(254, 254, 254, 1) 60%,
+    rgba(6, 0, 94, 1) 100%
+  );
+  margin: 12px;
+  padding: 4px;
+}
+.user-card p {
+  font-size: 600;
+  margin: 6px;
+}
